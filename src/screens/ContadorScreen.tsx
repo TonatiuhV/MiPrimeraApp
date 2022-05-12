@@ -15,11 +15,21 @@ export const ContadorScreen = () => {
         /> SE RECOMENDA EL TOUCHOPACITY*/}
 
 
-        <TouchableOpacity onPress={ () => setContador(contador+1)}>
-            <View style={styles.bottomIngremental}>
+        <TouchableOpacity onPress={ () => setContador(contador+1)}
+            style={styles.absoluteBR}>
+            <View style={styles.fab}>
                  {/* Recuerda que el texto debe estar conetenido en las etiquetas text */}
-                <Text>
+                <Text style={styles.fabText}>
                     +1
+                </Text>
+            </View>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={ () => setContador(contador-1)}
+            style={styles.absoluteBL}>
+            <View style={styles.fab}>
+                 {/* Recuerda que el texto debe estar conetenido en las etiquetas text */}
+                <Text style={styles.fabText}>
+                    -1
                 </Text>
             </View>
         </TouchableOpacity>
@@ -40,5 +50,28 @@ const styles = StyleSheet.create({
     bottomIngremental:{
         backgroundColor: 'red',
         borderRadius: 100
-    },     
+    },
+    
+    absoluteBR: {
+        position: 'absolute',
+        bottom:25,
+        right:25
+    },
+    absoluteBL: {
+        position: 'absolute',
+        bottom:25,
+        left:25
+    },
+    fab: {
+        backgroundColor: '#5856D6',
+        width:50,
+        height:50,
+        borderRadius:50,
+        justifyContent:'center'
+    },
+    fabText: {
+        color:'white',
+        fontSize:25,
+        alignSelf:'center'
+    }
 })
