@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Button, Text, TouchableOpacity, View, StyleSheet } from 'react-native'
+import {  Text, View, StyleSheet } from 'react-native'
+import { Fab } from '../components/Fab'
 
 export const ContadorScreen = () => {
 
@@ -15,24 +16,18 @@ export const ContadorScreen = () => {
         /> SE RECOMENDA EL TOUCHOPACITY*/}
 
 
-        <TouchableOpacity onPress={ () => setContador(contador+1)}
+       {/*  <TouchableOpacity onPress={ () => setContador(contador+1)}
             style={styles.absoluteBR}>
             <View style={styles.fab}>
                  {/* Recuerda que el texto debe estar conetenido en las etiquetas text */}
-                <Text style={styles.fabText}>
+                {/* <Text style={styles.fabText}>
                     +1
                 </Text>
             </View>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={ () => setContador(contador-1)}
-            style={styles.absoluteBL}>
-            <View style={styles.fab}>
-                 {/* Recuerda que el texto debe estar conetenido en las etiquetas text */}
-                <Text style={styles.fabText}>
-                    -1
-                </Text>
-            </View>
-        </TouchableOpacity>
+        </TouchableOpacity> 
+     */}
+        <Fab title='-1'/>
+       
     </View>
   )
 }
@@ -52,26 +47,5 @@ const styles = StyleSheet.create({
         borderRadius: 100
     },
     
-    absoluteBR: {
-        position: 'absolute',
-        bottom:25,
-        right:25
-    },
-    absoluteBL: {
-        position: 'absolute',
-        bottom:25,
-        left:25
-    },
-    fab: {
-        backgroundColor: '#5856D6',
-        width:50,
-        height:50,
-        borderRadius:50,
-        justifyContent:'center'
-    },
-    fabText: {
-        color:'white',
-        fontSize:25,
-        alignSelf:'center'
-    }
+  
 })
