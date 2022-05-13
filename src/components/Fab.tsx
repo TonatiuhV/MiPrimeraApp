@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, TouchableNativeFeedback, TouchableOpacity, View } from 'react-native'
+import { Platform, StyleSheet, Text, TouchableNativeFeedback, TouchableOpacity, View } from 'react-native'
 
 
 interface Props {
@@ -10,34 +10,56 @@ interface Props {
 }
 // valor por defecto
 export const Fab = ({title, onPress ,position= 'br'}:Props) => {
-  return (
-    <View 
-        // Se pude realizar de esta manera
-        // style={ (position=== 'br')?
-        //     styles.absoluteBR:
-        //     styles.absoluteBL
-        // }
-        // TAMBIEN ASI
-        // style={styles[position=='br'?'absoluteBR':'absoluteBL']}
-        style={[ styles.fabPosition,
-        (position === 'br')?
-        styles.right:
-        styles.left
-    ]}>
-         <TouchableNativeFeedback onPress={ onPress }
-             background={TouchableNativeFeedback.Ripple('gray', false, 25)}
-            
-            >
-            <View style={styles.fab}>
-                    {/* Recuerda que el texto debe estar conetenido en las etiquetas text */}
-                <Text style={styles.fabText}>
-                    {title}
-                </Text>
-            </View>
-        </TouchableNativeFeedback>
-    </View>   
-   
-  )
+
+     const ios = () =>{
+         return (
+            <TouchableOpacity
+                onPress={ onPress }
+                style={[ styles.fabPosition,
+                (position === 'br')?
+                styles.right:
+                styles.left
+            ]}>
+                <View style={styles.fab}>
+                        {/* Recuerda que el texto debe estar conetenido en las etiquetas text */}
+                    <Text style={styles.fabText}>
+                        {title}
+                    </Text>
+                </View>
+            </TouchableOpacity>   
+         )
+     }
+     const android = () => {
+         return (
+            <View 
+                // Se pude realizar de esta manera
+                // style={ (position=== 'br')?
+                //     styles.absoluteBR:
+                //     styles.absoluteBL
+                // }
+                // TAMBIEN ASI
+                // style={styles[position=='br'?'absoluteBR':'absoluteBL']}
+                style={[ styles.fabPosition,
+                (position === 'br')?
+                styles.right:
+                styles.left
+            ]}>
+                <TouchableNativeFeedback onPress={ onPress }
+                    background={TouchableNativeFeedback.Ripple('gray', false, 25)}
+                    
+                    >
+                    <View style={styles.fab}>
+                            {/* Recuerda que el texto debe estar conetenido en las etiquetas text */}
+                        <Text style={styles.fabText}>
+                            {title}
+                        </Text>
+                    </View>
+                </TouchableNativeFeedback>
+            </View>   
+         )
+     }
+     //plataform sirve para determinar en que dispositivo nos encontramos
+    return (Platform.OS==='ios')?ios():android()
 }
 
 const styles = StyleSheet.create({
