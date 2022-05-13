@@ -3,17 +3,33 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 
 interface Props {
-    title:String
+    title:String;
+    position?: 'bl'| 'br'; // ? parametro opcional
+    // Se recomienda que las propiedades vayan antes de los metodos
+    onPress: () => void;
 }
-
-export const Fab = ({title}:Props) => {
+// valor por defecto
+export const Fab = ({title, onPress ,position= 'br'}:Props) => {
   return (
-    <TouchableOpacity onPress={ () => console.log('hola mundo')}
-        style={styles.absoluteBL}>
+    <TouchableOpacity onPress={ onPress }
+        // Se pude realizar de esta manera
+        // style={ (position=== 'br')?
+        //     styles.absoluteBR:
+        //     styles.absoluteBL
+        // }
+        // TAMBIEN ASI
+        // style={styles[position=='br'?'absoluteBR':'absoluteBL']}
+            style={[ styles.fabPosition,
+                (position === 'br')?
+                styles.right:
+                styles.left
+            ]}
+
+        >
         <View style={styles.fab}>
                 {/* Recuerda que el texto debe estar conetenido en las etiquetas text */}
             <Text style={styles.fabText}>
-                -1
+                {title}
             </Text>
         </View>
     </TouchableOpacity>
@@ -21,14 +37,25 @@ export const Fab = ({title}:Props) => {
 }
 
 const styles = StyleSheet.create({
-    absoluteBR: {
+    // OLD STYLES
+    // absoluteBR: {
+    //     position: 'absolute',
+    //     bottom:25,
+    //     right:25
+    // },
+    // absoluteBL: {
+    //     position: 'absolute',
+    //     bottom:25,
+    //     left:25
+    // },
+    fabPosition: {
         position: 'absolute',
         bottom:25,
+    },
+    right: {
         right:25
     },
-    absoluteBL: {
-        position: 'absolute',
-        bottom:25,
+    left: {
         left:25
     },
     fab: {
