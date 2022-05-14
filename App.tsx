@@ -8,7 +8,8 @@ import { BoxObjectModelScreen } from './src/screens/BoxObjectModelScreen';
 
 const App = () => {
   return (
-    <SafeAreaView>
+    //Safe tambien puede tener stilos
+    <SafeAreaView style={{ flex:1}}>
         {/* <HolaMundoScreen/> 
         <ContadorScreen/> */}
         <BoxObjectModelScreen/>
