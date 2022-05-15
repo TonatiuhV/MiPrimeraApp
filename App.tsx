@@ -1,8 +1,9 @@
 import React from 'react'
 // Gaantiza que se muestre el contenido adecuadamente en todos os dispositivos
 import { SafeAreaView } from 'react-native';
-import { BoxObjectModelScreen } from './src/screens/BoxObjectModelScreen';
-import { DimensionesScreen } from './src/screens/DimensionesScreen';
+// import { BoxObjectModelScreen } from './src/screens/BoxObjectModelScreen';
+// import { DimensionesScreen } from './src/screens/DimensionesScreen';
+import { PosicionScreen } from './src/screens/PosicionScreen';
 // import { ContadorScreen } from './src/screens/ContadorScreen';
 // import { HolaMundoScreen } from './src/screens/HolaMundoScreen';
 
@@ -14,7 +15,8 @@ const App = () => {
         {/* <HolaMundoScreen/> 
         <ContadorScreen/> */}
         {/* <BoxObjectModelScreen/> */}
-        <DimensionesScreen/>
+        {/* <DimensionesScreen/> */}
+        <PosicionScreen/>
     </SafeAreaView>
     )
 }
