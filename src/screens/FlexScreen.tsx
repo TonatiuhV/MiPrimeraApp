@@ -20,23 +20,24 @@ const styles= StyleSheet.create({
     container: {
         flex:1,
         backgroundColor: '#28C4D9',
-        flexDirection: 'row-reverse'// direcion de los hijos por defecto column
+        flexDirection: 'row-reverse',// direcion de los hijos por defecto column
+        justifyContent: 'flex-end'
     },
     caja1: {
-        flex:1, // Tomaña el tamaño maximo disponibe en caso de no tener flex los demas componentes hermanos
+        // flex:1, // Tomaña el tamaño maximo disponibe en caso de no tener flex los demas componentes hermanos
         borderWidth: 2,
         borderColor:'white',
         fontSize:30
     },
     caja2: {
-        flex: 1,// En caso de tener se suman los flex y se toma su valor como porentaje
-        height:200, // para que no coupe todo el spacio disponible
+        // flex: 1,// En caso de tener se suman los flex y se toma su valor como porentaje
+        // height:200, // para que no coupe todo el spacio disponible
         borderWidth: 2,
         borderColor:'white',
         fontSize:30
     },
     caja3: {
-        flex:4,
+        // flex:4,
         borderWidth: 2,
         borderColor:'white',
         fontSize:30
