@@ -1,7 +1,8 @@
 import React from 'react'
 // Gaantiza que se muestre el contenido adecuadamente en todos os dispositivos
 import { SafeAreaView } from 'react-native';
-import { FlexScreen } from './src/screens/FlexScreen';
+import { Tarea1Screen } from './src/screens/Tarea1Screen';
+// import { FlexScreen } from './src/screens/FlexScreen';
 // import { BoxObjectModelScreen } from './src/screens/BoxObjectModelScreen';
 // import { DimensionesScreen } from './src/screens/DimensionesScreen';
 // import { PosicionScreen } from './src/screens/PosicionScreen';
@@ -18,7 +19,8 @@ const App = () => {
         {/* <BoxObjectModelScreen/> */}
         {/* <DimensionesScreen/> */}
         {/* <PosicionScreen/> */}
-        <FlexScreen/>
+        {/* <FlexScreen/> */}
+        <Tarea1Screen/>
     </SafeAreaView>
     )
 }
