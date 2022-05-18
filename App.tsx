@@ -1,15 +1,16 @@
 import React from 'react'
 // Gaantiza que se muestre el contenido adecuadamente en todos os dispositivos
 import { SafeAreaView } from 'react-native';
+// import { Tarea1Screen } from './src/screens/Tarea1Screen';
 // import { Tarea2Screen } from './src/screens/Tarea2Screen';
 // import { Tarea3Screen } from './src/screens/Tarea3Screen';
 // import { Tarea4Screen } from './src/screens/Tarea4Screen';
 // import { Tarea5Screen } from './src/screens/Tarea5Screen';
 // import { Tarea6Screen } from './src/screens/Tarea6Screen';
 // import { Tarea7Screen } from './src/screens/Tarea7Screen';
-import { Tarea8Screen } from './src/screens/Tarea8Screen';
-import { Tarea9Screen } from './src/screens/Tarea9Screen';
-// import { Tarea1Screen } from './src/screens/Tarea1Screen';
+// import { Tarea8Screen } from './src/screens/Tarea8Screen';
+// import { Tarea9Screen } from './src/screens/Tarea9Screen';
+import { Tarea10Screen } from './src/screens/Tarea10Screen ';
 // import { FlexScreen } from './src/screens/FlexScreen';
 // import { BoxObjectModelScreen } from './src/screens/BoxObjectModelScreen';
 // import { DimensionesScreen } from './src/screens/DimensionesScreen';
@@ -36,7 +37,8 @@ const App = () => {
         {/* <Tarea6Screen/> */}
         {/* <Tarea7Screen/> */}
         {/* <Tarea8Screen/> */}
-        <Tarea9Screen/>
+        {/* <Tarea9Screen/> */}
+        <Tarea10Screen/>
     </SafeAreaView>
     )
 }
