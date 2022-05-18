@@ -8,6 +8,7 @@ import { SafeAreaView } from 'react-native';
 // import { Tarea6Screen } from './src/screens/Tarea6Screen';
 // import { Tarea7Screen } from './src/screens/Tarea7Screen';
 import { Tarea8Screen } from './src/screens/Tarea8Screen';
+import { Tarea9Screen } from './src/screens/Tarea9Screen';
 // import { Tarea1Screen } from './src/screens/Tarea1Screen';
 // import { FlexScreen } from './src/screens/FlexScreen';
 // import { BoxObjectModelScreen } from './src/screens/BoxObjectModelScreen';
@@ -34,7 +35,8 @@ const App = () => {
         {/* <Tarea5Screen/> */}
         {/* <Tarea6Screen/> */}
         {/* <Tarea7Screen/> */}
-        <Tarea8Screen/>
+        {/* <Tarea8Screen/> */}
+        <Tarea9Screen/>
     </SafeAreaView>
     )
 }
